@@ -1,0 +1,59 @@
+body {
+      margin-top: 100px;
+      background: linear-gradient(135deg, #2c003e, #001f3f);
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    img.banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 20px 0;
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+    }
+
+    #countdown {
+      display: flex;
+      gap: 25px;
+      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00ffff80;
+      margin-bottom: 40px;
+    }
+
+    .time-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid #ff00ff;
+      padding: 20px;
+      border-radius: 12px;
+      min-width: 100px;
+      box-shadow: 0 0 15px #00ffffaa;
+    }
+
+    .label {
+      font-size: 0.6em;
+      margin-top: 10px;
+      color: #ff99ff;
+      text-shadow: 0 0 5px #ff00ff;
+    }
+
+    #countdown > div > div:first-child {
+      font-size: 2.5rem;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
