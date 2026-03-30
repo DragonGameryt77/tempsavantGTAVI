@@ -1,59 +1,110 @@
+:root {
+  --bg-deep: #0f1728;
+  --bg-soft: #1a253b;
+  --panel: rgba(16, 24, 38, 0.78);
+  --line: rgba(118, 146, 189, 0.32);
+  --ink: #eef3fb;
+  --ink-soft: #aebed8;
+  --accent: #7ec4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-      margin-top: 100px;
-      background: linear-gradient(135deg, #2c003e, #001f3f);
-      color: #ffffff;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-    }
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 14% 10%, rgba(126, 196, 255, 0.2), transparent 35%),
+    radial-gradient(circle at 88% 2%, rgba(255, 154, 110, 0.18), transparent 32%),
+    linear-gradient(165deg, var(--bg-deep) 0%, var(--bg-soft) 100%);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
 
-    img.banner {
-      width: 100%;
-      max-height: 300px;
-      object-fit: contain;
-    }
+.countdown-page {
+  width: min(980px, 100%);
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: clamp(20px, 4vw, 42px);
+  box-shadow: 0 24px 60px rgba(6, 13, 24, 0.45);
+  backdrop-filter: blur(7px);
+}
 
-    h1 {
-      font-size: 2.5em;
-      background: linear-gradient(45deg, #ff00ff, #00ffff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin: 20px 0;
-      text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
-    }
+.banner {
+  width: min(520px, 100%);
+  max-height: 170px;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
 
-    #countdown {
-      display: flex;
-      gap: 25px;
-      font-size: 2em;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #00ffff80;
-      margin-bottom: 40px;
-    }
+.eyebrow {
+  margin: 0;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.76rem;
+}
 
-    .time-box {
-      background-color: rgba(0, 0, 0, 0.6);
-      border: 2px solid #ff00ff;
-      padding: 20px;
-      border-radius: 12px;
-      min-width: 100px;
-      box-shadow: 0 0 15px #00ffffaa;
-    }
+h1 {
+  margin: 10px 0 0;
+  font-size: clamp(1.6rem, 3.6vw, 2.55rem);
+  letter-spacing: -0.02em;
+}
 
-    .label {
-      font-size: 0.6em;
-      margin-top: 10px;
-      color: #ff99ff;
-      text-shadow: 0 0 5px #ff00ff;
-    }
+#countdown {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 14px;
+}
 
-    #countdown > div > div:first-child {
-      font-size: 2.5rem;
-      color: #00ffff;
-      text-shadow: 0 0 10px #00ffff;
-    }
+.time-box {
+  background: rgba(6, 11, 20, 0.46);
+  border: 1px solid rgba(126, 196, 255, 0.22);
+  border-radius: 16px;
+  padding: 16px 10px;
+}
+
+#countdown > div > div:first-child {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.label {
+  margin-top: 10px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+}
+
+.note {
+  margin: 20px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 14px;
+  }
+
+  .countdown-page {
+    border-radius: 18px;
+    padding: 16px;
+  }
+
+  #countdown {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px;
+  }
+}
