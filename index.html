@@ -2,37 +2,40 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compte à rebours GTA VI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="countdown-page">
+    <img src="logogtavi.png" alt="Logo GTA VI" class="banner">
 
-  <!-- Image en haut, en pleine largeur -->
-  <img src="logogtavi.png" alt="Logo GTA VI" class="banner">
+    <p class="eyebrow">Rockstar Games</p>
+    <h1>Sortie de GTA VI dans</h1>
 
-  <h1>Sortie de GTA VI dans :</h1>
+    <section id="countdown" aria-label="Compte a rebours GTA VI">
+      <div class="time-box">
+        <div id="days">0</div>
+        <div class="label">Jours</div>
+      </div>
+      <div class="time-box">
+        <div id="hours">0</div>
+        <div class="label">Heures</div>
+      </div>
+      <div class="time-box">
+        <div id="minutes">0</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="time-box">
+        <div id="seconds">0</div>
+        <div class="label">Secondes</div>
+      </div>
+    </section>
 
-  <div id="countdown">
-    <div class="time-box">
-      <div id="days">0</div>
-      <div class="label">Jours</div>
-    </div>
-    <div class="time-box">
-      <div id="hours">0</div>
-      <div class="label">Heures</div>
-    </div>
-    <div class="time-box">
-      <div id="minutes">0</div>
-      <div class="label">Minutes</div>
-    </div>
-    <div class="time-box">
-      <div id="seconds">0</div>
-      <div class="label">Secondes</div>
-    </div>
-  </div>
+    <p class="note">Date cible: 19 novembre 2026 a 14:00</p>
+  </main>
 
-  <script src="script.js">
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
